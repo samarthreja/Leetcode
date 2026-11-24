@@ -3,9 +3,9 @@ class Solution {
         int n = nums.length;
         int ans = 0;
         for(int i = 0; i<n; i++){
-            long p = 1;
-            long g = 0;
-            long l = 1;
+            int p = 1;
+            int g = 0;
+            int l = 1;
             for(int j = i; j<n; j++){
                 p = p * nums[j];
                 g = gcd(g, nums[j]);
@@ -17,9 +17,9 @@ class Solution {
         }
         return ans;
     }
-    public long gcd(long a, long b){
+    public int gcd(int a, int b){
         while(b != 0){
-            long temp = b;
+            int temp = b;
             b = a % b;
             a = temp;
         }
